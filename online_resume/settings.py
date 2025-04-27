@@ -24,9 +24,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('Uq_E22VJJI467q8SfECe4RTlq1DxjjDg9QoblB_EYc7gRbb9Tv7O_S39HEqY__ca4KM', 'your-default-fallback-key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
-ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -147,10 +144,12 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 CONTACT_EMAIL = 'rishikumar54020@gmail.com'
 
 
-DEBUG = False
-ALLOWED_HOSTS = ['*']
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
+DEBUG = True
+
+ALLOWED_HOSTS = []
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
