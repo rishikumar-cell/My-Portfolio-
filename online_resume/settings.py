@@ -146,6 +146,9 @@ EMAIL_HOST_PASSWORD = 'vcnv xzgt qefl dzdu'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 CONTACT_EMAIL = 'rishikumar54020@gmail.com'
 
+
+DEBUG = False
+ALLOWED_HOSTS = ['*']
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
