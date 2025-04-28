@@ -10,8 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
-  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <link href="{% static 'assets/img/profile-img.png' %}" rel="icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -120,8 +119,8 @@
             
             <div class="social-mdeia">
               <a href="linkedin.com/in/ch-venukumar"><i class="fab fa-linkedin-in"><span> | </span></i></a>
-              <a href=""><i class="fab fa-github"><span> | </span></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="https://github.com/rishikumar-cell"><i class="fab fa-github"><span> | </span></i></a>
+              <a href="https://www.instagram.com/__rishi._.19/"><i class="fab fa-instagram"></i></a>
               <br><br>
             </div>
             
@@ -165,29 +164,29 @@
               
   <div class="container mt-4">
     <div class="list-group">
-      <a href="#" class="list-group-item list-group-item-action custom-bg">
+      <a href="#skills" class="list-group-item list-group-item-action custom-bg">
       <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">List group item heading</h5>
-        <small>3 days ago</small>
+        <h5 class="mb-1">Skills</h5>
+        <small>28/04/2025</small>
       </div>
-      <p class="mb-1">Some placeholder content in a paragraph.</p>
-      <small>And some small print.</small>
+      <p class="mb-1">My skills inculde...</p>
+      <small>Click to see</small>
       </a>
-      <a href="#" class="list-group-item list-group-item-action custom-bg">
+      <a href="#experience" class="list-group-item list-group-item-action custom-bg">
       <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">List group item heading</h5>
-        <small class="text-muted">3 days ago</small>
+        <h5 class="mb-1">Experience</h5>
+        <small class="text-muted">28/04/2025</small>
       </div>
-      <p class="mb-1">Some placeholder content in a paragraph.</p>
-      <small class="text-muted">And some muted small print.</small>
+      <p class="mb-1">I have good experience in my skills to grow better...</p>
+      <small class="text-muted">Click to see</small>
       </a>
-      <a href="#" class="list-group-item list-group-item-action custom-bg">
+      <a href="#resume" class="list-group-item list-group-item-action custom-bg">
       <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">List group item heading</h5>
-        <small class="text-muted">3 days ago</small>
+        <h5 class="mb-1">Resume</h5>
+        <small class="text-muted">27/04/2025</small>
       </div>
-      <p class="mb-1">Some placeholder content in a paragraph.</p>
-      <small class="text-muted">And some muted small print.</small>
+      <p class="mb-1">I have good resume to show case my skills and expertise</p>
+      <small class="text-muted">Click to see</small>
       </a>
     </div>
     </div>
@@ -536,19 +535,19 @@ and progress.</p>
     </h2>
     
         <div class="project-card">
-          <img src="{% static 'assets/img/portfolio/books-1.jpg' %}" alt="Stonk Market Project" class="project-img" />
+          <img src="https://cdn.prod.website-files.com/65b0e179d4655faa9e6eedab/66125ee13ae6c5ad1730e48b_Frame-4272-1536x768.webp" alt="Stonk Market Project" class="project-img" />
           <div class="project-content">
             <h3>AI Blog Generator</h3>
-            <p class="tech">Technologies Used: <span>React</span>, <span>REST API</span>,<span>Assembly AI</span>,<span>Open AI</span>, <span>Django</span>,<span>Postgresql</span></p>
+            <p class="tech">Technologies Used: <span>HTML,CSS,JS</span>, <span>REST API</span>,<span>Assembly AI</span>,<span>Open AI</span>, <span>Django</span>,<span>Postgresql</span></p>
             <ul>
-              <li>Built an AI powered blog generator that converts youtube videos into well-structured blog articles using 
+              <li>Building an AI powered blog generator that converts youtube videos into well-structured blog articles using 
                 video transcripts and reduced manual blog writing time by 80%.</li>
               <li>Used OpenAI and Assembly AI to the API calls to generate Well Structured Blog articles </li>
               <li>This project Enhanced my skills more and I Learned How APIs work.</li>
             </ul>
             <div class="project-links">
               <a href="#" target="_blank">Live</a>
-              <a href="#" target="_blank">Repo</a>
+              <a href="https://github.com/rishikumar-cell/ai_blog_generator" target="_blank">Repo</a>
             </div>
           </div>
         </div>
@@ -598,37 +597,45 @@ and progress.</p>
           </div>
 <hr>
           <br><br>
+         
           <div class="col-lg-8">
             <form action="{% url 'contact' %}" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              {% csrf_token %}  
+              {% csrf_token %}
               <div class="row gy-4">
-
+          
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                 </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+          
+                <div class="col-md-6">
+                  <input type="email" name="email" class="form-control" placeholder="Your Email" required>
                 </div>
-
+          
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  <input type="text" name="subject" class="form-control" placeholder="Subject" required>
                 </div>
-
+          
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  <textarea name="message" class="form-control" rows="6" placeholder="Message" required></textarea>
                 </div>
-
+          
                 <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message" style="background-color: #59ca48;" ></div>
-                  <div class="sent-message" style="background-color: #59ca48;"> Your message has been sent. Thank you!</div>
+                  <div class="loading" style="display: none;">Loading...</div>
+                  <div class="error-message" style="display: none; background-color: #ff4d4d; color: white; padding: 10px; border-radius: 6px; margin-top: 10px;"></div>
+                  <div class="sent-message" style="display: none; background-color: #59ca48; color: white; padding: 10px; border-radius: 6px; margin-top: 10px;">
+                    Your message has been sent. Thank you!
+                  </div>
                 </div>
-                  <button type="submit">Send Message</button>
-                
+          
+                <div class="col-md-12 text-center">
+                  <button type="submit" class="btn-send">Send Message</button>
                 </div>
+          
               </div>
             </form>
+          </div>
+          
+            
           </div><!-- End Contact Form -->
 
         </div>
@@ -644,10 +651,10 @@ and progress.</p>
     <div class="container ">
       <h3 class="sitename " style="color: rgb(186, 186, 129);;">Venu Kumar Chittimalla</h3>
       <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="fab fa-twitter"></i></a>
-        <a href=""><i class="fab fa-instagram"></i></a>
-        <a href=""><i class="fab fa-linkedin-in"></i></a>
-        <a href=""><i class="fab fa-github"></i></a>
+        <a href="https://x.com/kumar_rish7207"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/__rishi._.19/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/venukumarch/"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/rishikumar-cell"><i class="fab fa-github"></i></a>
 
       </div>
       <div class="social-links">
