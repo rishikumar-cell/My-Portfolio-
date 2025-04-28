@@ -15,6 +15,7 @@ import os
 
 PORT = os.getenv('PORT', 8000)  # Default to 8000 if PORT is not set
 
+ALLOWED_HOSTS = ['my-portfolio-production-b7fa.up.railway.app', 'localhost', '127.0.0.1']
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
