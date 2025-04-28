@@ -101,3 +101,6 @@ CONTACT_EMAIL = 'rishikumar54020@gmail.com'
 DEBUG = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+CSRF_TRUSTED_ORIGINS = [
+    'https://my-portfolio-production-6e0c.up.railway.app',
+]
