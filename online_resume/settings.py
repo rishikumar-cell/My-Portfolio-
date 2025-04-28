@@ -24,6 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('Uq_E22VJJI467q8SfECe4RTlq1DxjjDg9QoblB_EYc7gRbb9Tv7O_S39HEqY__ca4KM', 'your-default-fallback-key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
+ALLOWED_HOSTS = [
+    'ballast.proxy.rlwy.net',
+    'localhost',
+    '127.0.0.1',
+    # Add others if needed
+]
 
 
 # Application definition
