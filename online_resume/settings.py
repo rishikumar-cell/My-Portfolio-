@@ -15,8 +15,17 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', 'localhost').split(',')
+
+
+ALLOWED_HOSTS = [
+    'ballast.proxy.rlwy.net',
+    'localhost',
+    '127.0.0.1',
+    # Add others if needed
+]
+
+ALLOWED_HOSTS = ['*']
 
 
 # Quick-start development settings - unsuitable for production
@@ -26,13 +35,6 @@ ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', 'localhost').split(',')
 SECRET_KEY = os.getenv('Uq_E22VJJI467q8SfECe4RTlq1DxjjDg9QoblB_EYc7gRbb9Tv7O_S39HEqY__ca4KM', 'your-default-fallback-key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-ALLOWED_HOSTS = [
-    'ballast.proxy.rlwy.net',
-    'localhost',
-    '127.0.0.1',
-    # Add others if needed
-]
-
 
 # Application definition
 
