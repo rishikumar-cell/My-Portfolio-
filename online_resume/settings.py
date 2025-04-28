@@ -14,12 +14,10 @@ from pathlib import Path
 import os
 
 PORT = os.getenv('PORT', 8000)  # Default to 8000 if PORT is not set
-
 ALLOWED_HOSTS = [
-    'my-portfolio-production-6e0c.up.railway.app',
-    'my-portfolio-production-b7fa.up.railway.app',
-    'localhost',
-    '127.0.0.1'
+    'my-portfolio-production-6e0c.up.railway.app',  # Add your Railway domain here
+    'localhost',  # Allow localhost for local development
+    '127.0.0.1'   # Allow localhost IP address
 ]
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
