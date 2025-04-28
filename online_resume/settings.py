@@ -123,13 +123,9 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static'),
-    os.path.join(BASE_DIR,'media')
 ]
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-
-MEDIA_URL = '/media/'
-MEDIA_ROOTV = BASE_DIR / 'mediafiles'
 
 # --- Email Configuration ---
 
