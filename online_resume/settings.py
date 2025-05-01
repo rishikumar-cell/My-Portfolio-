@@ -5,7 +5,7 @@ PORT = os.getenv('PORT', 8000)  # Default to 8000 if PORT is not set
 
 # Use environment variable to specify allowed hosts in production
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'my-portfolio-production-6e0c.up.railway.app,localhost,127.0.0.1').split(',')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'venukumar-portfolio.up.railway.app,localhost,127.0.0.1').split(',')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
