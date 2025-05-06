@@ -1,13 +1,11 @@
 from pathlib import Path
 import os
 
-PORT = os.getenv('PORT', 8000)  # Default to 8000 if PORT is not set
+PORT = os.getenv('PORT', 8000)
 
-# Use environment variable to specify allowed hosts in production
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+# Allowed hosts from environment or default
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'venukumar-portfolio.up.railway.app,localhost,127.0.0.1').split(',')
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY', 'your-default-fallback-key')
@@ -19,13 +17,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'portfolio',  # Custom app for the online resume
+    'portfolio',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -38,7 +35,7 @@ ROOT_URLCONF = 'online_resume.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR, 'templates'],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,27 +77,28 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
-STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # For local testing
+# Email configuration
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'rishikumar54020@gmail.com'
-EMAIL_HOST_PASSWORD = 'vcnv xzgt qefl dzdu'
-
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')  # Use env var for security
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 CONTACT_EMAIL = 'rishikumar54020@gmail.com'
 
+# Debug should be False in production
 DEBUG = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# CSRF trusted origin for deployed Railway app
 CSRF_TRUSTED_ORIGINS = [
-    'https://my-portfolio-production-6e0c.up.railway.app',
+    'https://venukumar-portfolio.up.railway.app',
 ]
+
+# For Railway HTTPS proxy
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
